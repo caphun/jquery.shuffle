@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery: Array Shuffle</title>
+<link rel="stylesheet" href="../../master.css" media="screen" />
+<script type="text/javascript" src="../../jquery-1.2.6.js"></script>
+<script type="text/javascript" src="jquery.shuffle.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	// unordered list
+	$('button.item').click(function(){
+		$('ul').shuffle();
+	});
+	
+	// a series of paragraphs
+	$('button.div').click(function(){
+		$('#container').shuffle();
+	});
+
+	// an array
+	var arr = [1,2,3,4,5,6];
+	$('#array').text(arr.join(', '));
+	$('button.array').click(function(){
+		arr = $.shuffle(arr);
+		$('#array').text(arr.join(', '));
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="page">
+	<div id="header">
+		<h1>jQuery: Shuffle</h1>
+	</div>
+	<div id="content">
+		<p>A demonstration of the shuffle plugin applied to a <code>UL</code> tag; a <code>DIV</code> tag; and a JavaScript Array object.</p>
+		
+		<table border="1" cellpadding="10" cellspacing="0">
+		<tr>
+			<th>UL</th>
+			<th>DIV container</th>
+			<th>Array</th>
+		</tr>
+		<tr>
+			<td>
+				<ul>
+					<li>item 1</li>
+					<li>item 2</li>
+					<li>item 3</li>
+					<li>item 4</li>
+					<li>item 5</li>
+					<li>item 6</li>
+				</ul>
+			</td>
+			<td>
+				<div id="container">
+					<p>para 1</p>
+					<p>para 2</p>
+					<p>para 3</p>
+					<p>para 4</p>
+					<p>para 5</p>
+					<p>para 6</p>
+				</div>
+			</td>
+			<td>
+				<div id="array"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><button class="item">Shuffle</button></td>
+			<td><button class="div">Shuffle</button></td>
+			<td><button class="array">Shuffle</button></td>
+		</tr>
+		</table>
+		
+		<br /><br />
+		
+		<p><a href="http://yelotofu.com/2008/08/jquery-shuffle/">Read original blog post</a></p>
+	</div>
+</div>
+</body>
+</html>
