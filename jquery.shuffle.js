@@ -2,10 +2,9 @@
  * jQuery shuffle
  *
  * Copyright (c) 2008 Ca-Phun Ung <caphun at yelotofu dot com>
- * Dual licensed under the MIT (MIT-LICENSE.txt)
- * and GPL (GPL-LICENSE.txt) licenses.
+ * Licensed under the MIT (MIT-LICENSE.txt) license.
  *
- * http://yelotofu.com/labs/jquery/snippets/shuffle/
+ * http://github.com/caphun/jquery.shuffle
  *
  * Shuffles an array or the children of a element container.
  * This uses the Fisher-Yates shuffle algorithm <http://jsfromhell.com/array/shuffle [v1.0]>
